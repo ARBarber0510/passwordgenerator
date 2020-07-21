@@ -32,36 +32,42 @@ function generatePassword() {
   }
 
   var confirmNumeric = confirm("Would you like to include numeric characters?");
+  var confirmLowerAlpha = confirm("Would you like to include lowercase characters?");
+  var confirmUpperAlpha = confirm("Would you like to include uppercase characters?");
+  var confirmSpecialChar = confirm("Would you like to include special characters?");
+  
+  //Loop if no parameters are selected.
+  while (confirmNumeric === false && confirmLowerAlpha === false && confirmUpperAlpha === false && confirmSpecialChar === false) {
+    alert ("You must select at least one criteria!")
+    var confirmNumeric = confirm("Would you like to include numeric characters?");
+    var confirmLowerAlpha = confirm("Would you like to include lowercase characters?");
+    var confirmUpperAlpha = confirm("Would you like to include uppercase characters?");
+    var confirmSpecialChar = confirm("Would you like to include special characters?");
+  };
 
+  //Action assigned to each parameter
   if (confirmNumeric === true) {
     passwordChar = passwordChar.concat(numeric);
-
-  }
-
-  var confirmLowerAlpha = confirm("Would you like to include lowercase characters?");
-
-
+    console.log(passwordChar);
+  };
+  
   if (confirmLowerAlpha === true) {
     passwordChar = passwordChar.concat(lowerAlpha);
-  }
+    console.log(passwordChar);
+  };
 
-
-  var confirmUpperAlpha = confirm("Would you like to include uppercase characters?");
-
+  
   if (confirmUpperAlpha === true) {
     passwordChar = passwordChar.concat(upperAlpha);
-  }
-
-
-  var confirmSpecialChar = confirm("Would you like to include special characters?");
-
+    console.log(passwordChar);
+  };
+  
   if (confirmSpecialChar === true) {
     passwordChar = passwordChar.concat(specialChar);
-  }
+    console.log(passwordChar);
+  };
 
-  console.log(passwordChar)
-
-  // For loop
+  // For loop based off selected parameters
   for (var i = 0; i < confirmLength; i++) {
     password = password + passwordChar[Math.floor(Math.random() * passwordChar.length) + 1];
     console.log(password);

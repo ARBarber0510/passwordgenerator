@@ -13,6 +13,5 @@ Upon the users' selection, the generate will provide a combonation based of thei
 
 
 ## Deployed Link
-https://arbarber0510.github.io/passwordgeneratorhw/
 
 

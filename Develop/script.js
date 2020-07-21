@@ -8,11 +8,20 @@ var upperAlpha = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 var specialChar = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "]", "|", "<", ">", ".", "?", "/"];
 var passwordChar = [];
 
+// // Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
+  var password = "";
 
   // Confirm parameters of password
   var confirmLength = prompt("Please select the length of your password.");
@@ -53,22 +62,11 @@ function generatePassword() {
   console.log(passwordChar)
 
   // For loop
-  var password = generatePassword();
-
   for (var i = 0; i < confirmLength; i++) {
-    password = password + passwordChar[Math.floor(Math.random() * passwordChar.lenth)];
+    password = password + passwordChar[Math.floor(Math.random() * passwordChar.length) + 1];
     console.log(password);
 
   }
   return (password);
 }
-
-// Write password to the #password input
-function writePassword() {
-  var passwordText = document.querySelector("#password");
-}
-
-  passwordText.value = password;
-
-
 

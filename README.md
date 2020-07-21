@@ -11,7 +11,5 @@ When the user clicks the "Generate a Password" button, they will be required to 
         ** Note: If none of the above characters are chosen, the user will be asked to select from the criteria again. 
 Upon the users' selection, the generate will provide a combonation based of their selections.
 
-
-## Deployed Link
-
+Deployed link: https://arbarber0510.github.io/passwordgeneratorhw/
 

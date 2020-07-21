@@ -27,7 +27,7 @@ function generatePassword() {
   var confirmLength = prompt("Please select the length of your password.");
 
   while (confirmLength <= 7 || confirmLength >= 129) {
-    alert("Password must be between 8 and 128 characters");
+    alert("Password must be between 8 and 128 characters!");
     var confirmLength = prompt("Please select the length of your password.");
   }
 
@@ -69,7 +69,7 @@ function generatePassword() {
 
   // For loop based off selected parameters
   for (var i = 0; i < confirmLength; i++) {
-    password = password + passwordChar[Math.floor(Math.random() * passwordChar.length) + 1];
+    password = password + passwordChar[Math.floor(Math.random() * passwordChar.length)];
     console.log(password);
 
   }
